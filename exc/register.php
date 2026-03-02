@@ -10,9 +10,9 @@
         <label for="" name="name">name</label>
         <input type="text" required>
         <label name="email">email</label>
-        <input type="text" required>
+        <input name="email" type="text" required>
         <label name="password">password</label>
-        <input type="text" required>
+        <input name="email" type="text" required>
         <select name="role" id=""> <option value="">admin</option>
         <option value="">formateur</option>
         <option value="">student</option>
