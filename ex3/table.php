@@ -11,17 +11,23 @@
 </html>
 
 <?php 
-$students =[
-        "nom" => "alami","prenome" => 'med',
-        'note' =>[10,12,13]
-];[
-"nom" => "azouz","prenome" => 'sert',
-        'note' =>[10,12,13]
-];[
-    "nom" => "yassir","prenome" => 'soliman',
-        'note' =>[10,12,13]
+$students=[
+
+['nom'=>'Alami','prénom'=>'Ali','notes'=>[12,7,14.5] ],
+
+['nom'=>'Serraj','prénom'=>'Sara','notes'=>[10,17,12] ],
+
+['nom'=>'Kamili','prénom'=>'Ilham','notes'=>[9,15,16.5] ]
+
 ];
 
+//fonction qui calcule la moyenne d'un tableau de notes
+function calculerMoyenne($notes){
+    $sum=array_sum($notes);
+    $avg=$sum/count($notes);
+
+    return $avg;
+}
 ?>
  <table border="1">
     <tr>
@@ -49,11 +55,12 @@ $students =[
    foreach($students as $student){
      echo "<tr>";
     echo "<td>".$student["nom"]."</td>";
-    echo "<td>".$student["prenom"]."</td>";
-    echo "<td>".$student["note"][0]."</td>";
-    echo "<td>".$student["note"][1]."</td>";
-    echo "<td>".$student["note"][2]."</td>";
-
+    echo "<td>".$student["prénom"]."</td>";
+    echo "<td>".$student["notes"][0]."</td>";
+    echo "<td>".$student["notes"][1]."</td>";
+    echo "<td>".$student["notes"][2]."</td>";
+    echo "<td>".calculerMoyenne($student["notes"]). "</td>";
+    echo "</tr>";
    }
    
    ?>
