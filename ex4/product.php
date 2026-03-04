@@ -29,15 +29,15 @@ if($Qte>=10){
 }
 }
 if ($_SERVER["REQUEST_METHOD"] === "POST"){
-
-if(empty($_POST['Prix']) || empty($_POST['Qte']) ){
-    echo"the fileds are empty";
-}
+$Prix=$_POST["Prix"];
+$Qte=$_POST["Qte"];
+ if(empty($Qte) || empty($Prix)){
+        echo "Fill the fields";
+    }elseif($Qte < 0 || $Prix < 0){
+        echo "Valeurs invalide";
+    }else{
+        echo "Total : ". CalculePrix($Qte, $Prix);
     }
-    {
-    
-    $Prix=$_POST["Prix"];
-    $Qte=$_POST["Qte"];
-    echo "<p> the result is : ". CalculePrix($Prix,$Qte);
 }
+
 ?>
