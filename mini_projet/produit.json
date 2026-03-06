@@ -1,0 +1,22 @@
+[
+    {
+        "nom": "T\u00e9l\u00e9phone",
+        "prix": 3500,
+        "stock": 5
+    },
+    {
+        "nom": "Casque",
+        "prix": 400,
+        "stock": 3
+    },
+    {
+        "nom": "Tablette",
+        "prix": 2800,
+        "stock": 8
+    },
+    {
+        "nom": "Montre connect\u00e9e",
+        "prix": 900,
+        "stock": 12
+    }
+]
