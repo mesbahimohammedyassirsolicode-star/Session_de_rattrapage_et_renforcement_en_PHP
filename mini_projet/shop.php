@@ -60,8 +60,8 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     <label>choisir un produit</label>
     <select name="produit">
         <?php
-       foreach($products as $i => $p){
- echo "<option value='$i'>".$p["nom"]."</option>";
+       foreach($products as  $p){
+ echo "<option>".$p["nom"]."</option>";
 }
 ?>
     </select>
@@ -90,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
         </tr>
         <?php
         foreach($_SESSION['panier'] as $p){
-            // skip malformed entries lacking required keys
+            
             if(!isset($p['nom'], $p['prix'], $p['qte'])){
                 continue;
             }
