@@ -59,9 +59,9 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
    <form method="POST" class="shop-form">
     <label>choisir un produit</label>
     <select name="produit">
-        <?php
-       foreach($products as  $p){
- echo "<option>".$p["nom"]."</option>";
+   <?php
+foreach($products as $p){
+    echo "<option value='".$p["nom"]."'>".$p["nom"]."</option>";
 }
 ?>
     </select>
@@ -94,24 +94,13 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             if(!isset($p['nom'], $p['prix'], $p['qte'])){
                 continue;
             }
-
             echo "<tr>";
             echo "<td>".htmlspecialchars($p['nom'])."</td>";
             echo "<td>".$p['qte'] ."</td>";
             echo "<td>".htmlspecialchars($p['prix'])."</td>";
             echo "</tr>";
-
-
         }
-
-
-
-
-
         ?>
-
-
-    
    </table>
    <a href="invoice.php" class="invoice-link">View Invoice</a>
     </div> <!-- .shop -->
