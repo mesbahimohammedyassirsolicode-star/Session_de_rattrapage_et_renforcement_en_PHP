@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 ?>
     </select>
     <label>saisir une quantité</label>
-    <input type="text" name="Qte">
+    <input type="number" name="Qte">
     <button type="submit">buy</button>
    </form> 
    <p>
