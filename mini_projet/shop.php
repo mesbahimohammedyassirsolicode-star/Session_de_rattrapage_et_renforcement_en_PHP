@@ -60,8 +60,8 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     <label>choisir un produit</label>
     <select name="produit">
    <?php
-foreach($products as $p){
-    echo "<option value='".$p["nom"]."'>".$p["nom"]."</option>";
+foreach($products as $i => $p){
+    echo "<option value='$i'>".$p["nom"]."</option>";
 }
 ?>
     </select>
@@ -91,9 +91,7 @@ foreach($products as $p){
         <?php
         foreach($_SESSION['panier'] as $p){
             
-            if(!isset($p['nom'], $p['prix'], $p['qte'])){
-                continue;
-            }
+    
             echo "<tr>";
             echo "<td>".htmlspecialchars($p['nom'])."</td>";
             echo "<td>".$p['qte'] ."</td>";
@@ -103,6 +101,6 @@ foreach($products as $p){
         ?>
    </table>
    <a href="invoice.php" class="invoice-link">View Invoice</a>
-    </div> <!-- .shop -->
+    </div> 
 </body>
 </html>
